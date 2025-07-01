@@ -178,7 +178,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 .setTitle("The Player is Winner")
                 .setMessage("The player is win, did you want to continue again?")
                 .setPositiveButton("Restart") { dialog, which ->
-                    recreate()
+                    plyScore = 0
+                    playerScore.text = "0"
                 }
                 .setNegativeButton("Exit") { dialog, which ->
                     finish()
@@ -191,7 +192,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 .setTitle("The Computer is Winner")
                 .setMessage("The Computer is win, did you want to continue again?")
                 .setPositiveButton("Restart") { dialog, which ->
-                    recreate()
+                    comScore = 0
+                    computerScore.text = "0"
                 }
                 .setNegativeButton("Exit") { dialog, which ->
                     finish()
