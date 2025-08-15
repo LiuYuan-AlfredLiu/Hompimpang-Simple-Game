@@ -1,5 +1,6 @@
 package protection.member.make_a_simple_game
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import kotlinx.coroutines.Job
@@ -146,7 +147,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun whoWinner() {
         if (playerNumber == computerNumber) {
-            winnerWrite = "Nobody is the winner, $plyScore - $comScore"
+            winnerWrite = "Nobody is the winner"
         }
 
         else if ((playerNumber == R.drawable.rock && computerNumber == R.drawable.scissors) ||
@@ -172,6 +173,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         computerScore.text = "$comScore"
     }
 
+    @SuppressLint("SetTextI18n")
     private fun theWinner() {
         if (plyScore == 3) {
             AlertDialog.Builder(this)
@@ -182,6 +184,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     comScore = 0
                     playerScore.text = "0"
                     computerScore.text = "0"
+                    whoWinner.text = "Who is winner?"
                 }
                 .setNegativeButton("Exit") { dialog, which ->
                     finish()
@@ -198,6 +201,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     comScore = 0
                     playerScore.text = "0"
                     computerScore.text = "0"
+                    whoWinner.text = "Who is winner?"
                 }
                 .setNegativeButton("Exit") { dialog, which ->
                     finish()
