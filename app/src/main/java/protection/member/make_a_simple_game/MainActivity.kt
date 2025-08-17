@@ -2,17 +2,18 @@ package protection.member.make_a_simple_game
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.Context
 import kotlinx.coroutines.Job
 
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.common.internal.Objects
 
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -56,6 +57,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val fireStore = FirebaseFirestore.getInstance()
+
+        val user = hashMapOf(
+            "FirstName" to "Chika",
+            "LastName" to "Takami"
+        )
+
+        fireStore.collection("user").add(user).addOnSuccessListener {
+            Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener {
+            Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_SHORT).show()
+        }
 
         playerImage = binding.player
         computerImage = binding.computer

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "107413785599",
+    "project_id": "hompimpa-simple-game",
+    "storage_bucket": "hompimpa-simple-game.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107413785599:android:9987e1efbc09ecd596b5ca",
+        "android_client_info": {
+          "package_name": "protection.member.make_a_simple_game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz_cVRg1e1Pj1Jkdy-AHMbOtgQV95PH18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
