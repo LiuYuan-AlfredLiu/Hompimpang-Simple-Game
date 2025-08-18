@@ -6,11 +6,12 @@ plugins {
 
 android {
     namespace = "protection.member.make_a_simple_game"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "protection.member.make_a_simple_game"
         minSdk = 29
+        //noinspection OldTargetApi
         targetSdk = 35
         versionCode = 2
         versionName = "2.0"
