@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         fireStore.collection("user").add(user).addOnSuccessListener {
             Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {
-            Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Fail", Toast.LENGTH_SHORT).show()
         }
 
         playerImage = binding.player
